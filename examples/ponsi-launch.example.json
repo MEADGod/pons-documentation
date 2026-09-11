@@ -1,0 +1,32 @@
+{
+  "sample": true,
+  "network": {
+    "name": "Robinhood Chain",
+    "chainId": 4663
+  },
+  "token": {
+    "name": "The Ponsi",
+    "symbol": "PONSI",
+    "displayTicker": "$PONSI",
+    "description": "The Ponsi, paired with NVDA.",
+    "image": null,
+    "socials": {
+      "x": null,
+      "telegram": null,
+      "website": null
+    }
+  },
+  "launch": {
+    "creatorWallet": null,
+    "initialBuyEth": 0,
+    "documentedPairAsset": "WETH",
+    "documentedLaunchFeeEth": 0.0005,
+    "documentedGraduationThresholdEth": 4.2
+  },
+  "disclosures": [
+    "This is a fictional launch configuration.",
+    "The NVDA reference is narrative only; the documented onchain pair asset is WETH.",
+    "The token is not represented as NVIDIA stock, stock-backed, or affiliated with NVIDIA.",
+    "Verify all live values before signing."
+  ]
+}
