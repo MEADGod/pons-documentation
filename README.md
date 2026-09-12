@@ -1,73 +1,34 @@
-# PONS Lightweight Documentation
+# PONS v2 — Launches, Custom Pairs & Apple Table
 
-A compact, unofficial reference for launching and understanding tokens on **pons**.
+An expanded, unofficial documentation pack based on the official PONS v1 and v2 documentation, reviewed on 12 September 2026. This is documentation, not an executable launchpad or trading bot.
 
-Official documentation: https://docs.ponsfamily.com/
+## Start here
 
-Launchpad: https://www.ponsfamily.com/launchpad
+- [Version boundaries](docs/01-VERSIONS.md)
+- [Protocol lifecycle](docs/02-LIFECYCLE.md)
+- [Launch guide](docs/03-LAUNCH.md)
+- [Stock exposure and the meaning of 1x](docs/04-STOCK-EXPOSURE.md)
+- [Apple Table worked example](docs/05-APPLE-TABLE.md)
+- [Trading, quotes and routing](docs/06-TRADING.md)
+- [Fees, payouts and vesting](docs/07-FEES.md)
+- [Integration requirements](docs/08-INTEGRATION.md)
+- [Risks and release checklist](docs/09-RISKS.md)
+- [Sources and verification boundaries](SOURCES.md)
 
-Robinhood Chain explorer: https://robinhoodchain.blockscout.com/
+## What changed from the earlier pack
 
-> Reviewed against the public PONS documentation on 11 September 2026. Live interfaces, fees, thresholds, contracts, and protocol behavior can change. Verify current values in the official documentation and wallet transaction before signing.
+The earlier pack summarized v1: WETH-only Uniswap v3 pools from launch. **PONS v2 supports approved custom quote assets, including the documented possibility of tokenised-stock pairs.** A v2 launch starts on a bonding curve and graduates into Uniswap v4. These are different protocol versions, not interchangeable descriptions.
 
-## At a Glance
+## Featured example
 
-PONS is an interface for launching and trading user-created tokens on Robinhood Chain. PONS does not hold user funds; each launch and trade is submitted as a transaction for the connected wallet to approve.
+**Apple Table** — illustrative ticker **$ATABLE** — a proposed launch paired against an approved Apple-linked stock token, if available. The ticker is an editorial suggestion, not supplied by the user or reserved onchain.
 
-Current documentation states that:
+The requested phrase **“Long Apple 1x”** describes a proposed unleveraged stock-exposure objective. It is NOT a verified PONS leverage setting, a promise of stock-price tracking, or a claim that holding Apple Table is identical to holding AAPL.
 
-- tokens launch on Robinhood Chain;
-- the network chain ID is `4663`;
-- launches use Uniswap V3 pools;
-- each token trades against WETH;
-- the fixed token supply is one billion tokens;
-- the pool fee is 1%;
-- the launch fee is 0.0005 ETH;
-- pool liquidity is locked automatically;
-- the default graduation threshold is 4.2 ETH of paired WETH;
-- there is no bonding curve and no later migration; and
-- trading continues in the same pool after graduation.
+A stock-token quote asset can provide an Apple-related component of exposure, but Apple Table has its own price against that quote asset. Its dollar performance depends on both. No Apple quote-token address, issuer, approval, redemption rights, or live availability has been verified for this example.
 
-## Folder Contents
+## Current documented rollout caveats
 
-```text
-pons-light-docs/
-├── README.md
-├── docs/
-│   ├── INTEGRATION.md
-│   ├── LAUNCH_TOKEN.md
-│   ├── PROTOCOL.md
-│   └── RISKS.md
-├── examples/
-│   └── ponsi-launch.example.json
-└── SOURCES.md
-```
+The v2 page says public launches are closed and creation is limited to whitelisted accounts; check `canLaunch(address)`. It also says all three security engagements are still in progress and to treat v2 as unaudited until reports are published. The site displayed a degraded-performance notice. These are documentation observations, not independently verified chain state.
 
-## Example Token
-
-The example included in this folder is fictional:
-
-- **Name:** The Ponsi
-- **Ticker:** `$PONSI`
-- **Description:** The Ponsi, paired with NVDA.
-
-“Paired with NVDA” is a narrative reference only. According to the PONS documentation, the actual onchain pool pair is **WETH**, not NVDA stock or an NVDA-linked asset.
-
-See [`docs/LAUNCH_TOKEN.md`](docs/LAUNCH_TOKEN.md) for the full example.
-
-## Important Safety Notes
-
-Tokens launched through PONS are user-created and experimental. Graduation is a threshold event, not a quality signal. Locked liquidity does not guarantee price stability, market depth, future liquidity, or an exit.
-
-Always verify:
-
-- the network;
-- token contract address;
-- creator and fee recipient;
-- pool address;
-- holder concentration;
-- transaction parameters;
-- price impact and slippage; and
-- wallet transaction preview.
-
-Never share a private key or seed phrase.
+Nothing in this folder launches a token, spends funds, or opens a stock position.

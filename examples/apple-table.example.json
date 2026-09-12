@@ -1,0 +1,33 @@
+{
+  "sample": true,
+  "readyToLaunch": false,
+  "protocol": "PONS v2",
+  "name": "Apple Table",
+  "symbol": "ATABLE",
+  "displayTicker": "$ATABLE",
+  "theme": "Long Apple 1x",
+  "exposureObjective": {
+    "underlyingReference": "AAPL",
+    "direction": "long",
+    "targetLeverage": "1x",
+    "status": "concept-only",
+    "guaranteedTracking": false
+  },
+  "pair": {
+    "kind": "approved Apple-linked ERC-20, if available",
+    "address": null,
+    "issuer": null,
+    "decimals": null,
+    "approvalVerified": false
+  },
+  "launch": {
+    "chainId": 4663,
+    "creatorWallet": null,
+    "launchConfigId": null,
+    "expectedEconomics": null,
+    "initialBuy": "0",
+    "creatorTaxBps": 0,
+    "buybackEnabled": false
+  },
+  "disclosure": "Pairing does not make Apple Table a share or a guaranteed 1x AAPL tracker. This JSON is a planning fixture, not transaction calldata."
+}
